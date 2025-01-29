@@ -1,0 +1,80 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+/* Flexbox opmaak voor centrale container. Het zorgt ervoor dat de container altijd gecentreerd wordt in de viewport. */
+h1 {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555555;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    resize: vertical; /* Zorgt ervoor dat de gebruiker de hoogte van de textarea kan aanpassen */
+}
+
+/* Inputvelden en textarea-styling geïnspireerd door moderne UI-principes */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Zorgt voor een vloeiend effect wanneer je over de knop zweeft */
+}
+
+/* Hover-effect voor knop: verandert de kleur naar een donkerder blauw */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

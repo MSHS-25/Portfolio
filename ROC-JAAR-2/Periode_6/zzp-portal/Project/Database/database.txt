@@ -1,0 +1,93 @@
+CREATE DATABASE IF NOT EXISTS ZZP;
+USE ZZP;
+
+DROP TRIGGER IF EXISTS after_insert_appointments;
+DROP TABLE IF EXISTS appointment_projects;
+DROP TABLE IF EXISTS appointments;
+DROP TABLE IF EXISTS admin;
+DROP TABLE IF EXISTS klanten;
+DROP TABLE IF EXISTS projects;
+DROP TABLE IF EXISTS accounts;
+
+CREATE TABLE accounts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    user_type ENUM('klanten', 'admin') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create the projects table
+CREATE TABLE projects (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    hours DECIMAL(10,2) DEFAULT 0.0,        
+    description VARCHAR(255) DEFAULT NULL,
+    account_id INT NOT NULL,               
+    password INT(8) NOT NULL,  
+    FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE
+);
+
+CREATE TABLE appointments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    appointment_date DATE NOT NULL,
+    appointment_time TIME NOT NULL,
+    type VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    status ENUM('pending', 'accepted', 'canceled') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_appointment_date_time (appointment_date, appointment_time) 
+);
+
+CREATE TABLE appointment_projects (
+    appointment_id INT NOT NULL,
+    project_id INT NOT NULL,
+    PRIMARY KEY (appointment_id, project_id),
+    FOREIGN KEY (appointment_id) REFERENCES appointments(id) ON DELETE CASCADE,
+    FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE
+);
+
+CREATE TABLE klanten (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    address VARCHAR(255) DEFAULT NULL,
+    phone VARCHAR(15) DEFAULT NULL,
+    account_id INT NOT NULL,
+    FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE
+);
+
+CREATE TABLE admin (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    account_id INT NOT NULL,
+    FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE
+);
+
+INSERT INTO accounts (name, email, password, user_type) 
+VALUES ('Admin', 'admin@example.com', 'adminpassword', 'admin');
+
+DELIMITER $$
+CREATE TRIGGER after_insert_appointments
+AFTER INSERT ON appointments
+FOR EACH ROW
+BEGIN
+    INSERT INTO appointment_projects (appointment_id, project_id)
+    VALUES (NEW.id, (SELECT id FROM projects WHERE name = 'Default Project' LIMIT 1));
+END$$
+DELIMITER ;
+
+CREATE TABLE locatie_boeken (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    project_id INT NOT NULL,
+    start_datetime DATETIME NOT NULL,
+    end_datetime DATETIME NOT NULL,
+    totaal_uren DECIMAL(5,2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE
+);
+
+SELECT * FROM klanten;
+DESCRIBE klanten;
+SELECT * FROM projects;
