@@ -1,0 +1,154 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    background-color: gainsboro;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(164,164,164,1) 100%);
+}
+
+
+.info {
+    display: flex;
+    width: 100%;
+    color: black;
+    font-size: 30px;
+    font-family: monospace;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(164,164,164,1) 100%);
+}
+
+.info h1 {
+    margin-top: 50px;
+    margin-left: 30px;
+    box-sizing: border-box;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 10px rgb(144, 144, 144), 0 0 20px rgb(0, 0, 0), 0 0 30px rgb(0, 0, 0);
+    transition: text-shadow 0.5s ease, transform 0.5s ease; /* Voeg een overgang toe voor een soepele animatie */
+}
+
+.info h1:hover {
+    text-shadow: 0 0 20px rgb(255, 255, 255), 0 0 40px rgb(255, 255, 255), 0 0 60px rgb(255, 255, 255);
+    color: black; /* Als je de tekstkleur wilt veranderen bij hover */
+    transform: translateY(5px); /* Pas de verticale verschuiving aan zoals gewenst */
+}
+
+.Images img {
+    max-width: 200px;
+    height: auto;
+    border: 2.5px solid gray;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 30px;
+}
+
+footer video {
+    height: auto;
+    border: 2.5px solid gray;
+    border-radius: 20px;
+    position: relative;
+}
+
+.flexbox-container img {
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 10px 1px  rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 10px 1px  rgba(0,0,0,0.75);
+    
+}
+.flexbox-container{
+    display: flex;
+    justify-content: space-around;
+}
+.Kop{
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(164, 164, 164);
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.5s ease; /* Voeg een overgang toe voor een soepele animatie */
+}
+
+nav a:hover {
+    color: whitesmoke;
+    transform: translateY(-2px); /* Pas de verticale verschuiving aan zoals gewenst */
+}
+
+
+  section {
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 50px 16px;
+    text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 30px rgb(255, 255, 255); 
+    transition: color 0.3s ease, transform 0.5s ease; /* Voeg een overgang toe voor een soepele animatie */
+}
+
+section h1:hover {
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    text-shadow: 0 0 20px rgb(144, 144, 144), 0 0 40px rgb(0, 0, 0), 0 0 60px rgb(0, 0, 0);
+    color: rgb(255, 255, 255); /* Als je de tekstkleur wilt veranderen bij hover */
+
+}
+footer {
+    background-color: rgb(144, 144, 144);
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-container p {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cijferlijst</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <table class="cijferlijst">
+        <thead>
+            <tr class="header-row">
+                <th rowspan="2" class="logo-cell">LOGO</th>
+                <th rowspan="2" class="vak-cell">
+                    <select class="full-width">
+                        <option value="VAK">VAK</option>
+                        <option value="Wiskunde">Wiskunde</option>
+                        <option value="Nederlands">Nederlands</option>
+                        <option value="Engels">Engels</option>
+                    </select>
+                </th>
+                <th rowspan="2" class="klas-cell">
+                    <select class="full-width">
+                        <option value="KLAS">KLAS</option>
+                        <option value="1A">1A</option>
+                        <option value="2B">2B</option>
+                        <option value="3C">3C</option>
+                    </select>
+                </th>
+            </tr>
+            <tr class="subheader-row">
+                <th colspan="8" class="toetsnamen-cell">WEGEGING</th>
+            </tr>
+            <tr class="subheader-row">
+                <th class="aantal-cell">28 LEERLINGEN</th>
+                <th class="cijfer-cell">TOETS NAMEN</th>
+                <th class="cijfer-cell">TOETS NAMEN</th>
+                <th class="cijfer-cell">TOETS NAMEN</th>
+                <th class="cijfer-cell">TOETS NAMEN</th>
+                <th class="cijfer-cell">TOETS NAMEN</th>
+                <th class="cijfer-cell">TOETS NAMEN</th>
+                <th class="cijfer-cell">TOETS NAMEN</th>
+                <th class="cijfer-cell">TOETS NAMEN</th>
+                <th class="gemiddelde-cell">GEMIDDELDE CIJFER</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Hier kunnen de rijen met leerlingen en cijfers komen -->
+            <tr>
+                <td class="data-cell">Adamse</td>
+                <td class="data-cell"><input type="number" value="0.0" class="adamse-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="adamse-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="adamse-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="adamse-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="adamse-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="adamse-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="adamse-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="adamse-grade"></td>
+                <td class="data-cell" id="adamse_avg">0.0</td>
+            </tr>
+            
+            <script>
+            $(document).ready(function() {
+                // Function to calculate the average of input values and display it
+                function calculateAverage() {
+                    var sum = 0;
+                    var count = 0;
+                    $('.adamse-grade').each(function() {
+                        sum += parseFloat($(this).val()) || 0;
+                        count++;
+                    });
+                    var average = sum / count;
+                    $('#adamse_avg').text(average.toFixed(1));
+                }
+            
+                // Call calculateAverage function when input values change
+                $('.adamse-grade').on('input', calculateAverage);
+            });
+            </script>
+            
+            <tr>
+                <td class="data-cell">De Jong</td>
+                <td class="data-cell"><input type="number" value="0.0" class="dejong-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="dejong-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="dejong-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="dejong-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="dejong-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="dejong-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="dejong-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="dejong-grade"></td>
+                <td class="data-cell" id="dejong_avg">0.0</td>
+            </tr>
+            <script>
+                $(document).ready(function() {
+                    // Function to calculate the average of input values and display it
+                    function calculateAverage() {
+                        var sum = 0;
+                        var count = 0;
+                        $('.dejong-grade').each(function() {
+                            sum += parseFloat($(this).val()) || 0;
+                            count++;
+                        });
+                        var average = sum / count;
+                        $('#dejong_avg').text(average.toFixed(1));
+                    }
+                
+                    // Call calculateAverage function when input values change
+                    $('.dejong-grade').on('input', calculateAverage);
+                });
+                </script>
+
+            <tr>
+                <td class="data-cell">Evers</td>
+                <td class="data-cell"><input type="number" value="0.0" class="evers-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="evers-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="evers-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="evers-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="evers-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="evers-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="evers-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="evers-grade"></td>
+                <td class="data-cell" id="evers_avg">0.0</td>
+            </tr>
+            <script>
+                $(document).ready(function() {
+                    // Function to calculate the average of input values and display it
+                    function calculateAverage() {
+                        var sum = 0;
+                        var count = 0;
+                        $('.evers-grade').each(function() {
+                            sum += parseFloat($(this).val()) || 0;
+                            count++;
+                        });
+                        var average = sum / count;
+                        $('#evers_avg').text(average.toFixed(1));
+                    }
+                
+                    // Call calculateAverage function when input values change
+                    $('.evers-grade').on('input', calculateAverage);
+                });
+                </script>
+
+            <tr>
+                <td class="data-cell">Faber</td>
+                <td class="data-cell"><input type="number" value="0.0" class="faber-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="faber-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="faber-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="faber-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="faber-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="faber-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="faber-grade"></td>
+                <td class="data-cell"><input type="number" value="0.0" class="faber-grade"></td>
+                <td class="data-cell" id="faber_avg">0.0</td>
+            </tr>
+            <script>
+                $(document).ready(function() {
+                    // Function to calculate the average of input values and display it
+                    function calculateAverage() {
+                        var sum = 0;
+                        var count = 0;
+                        $('.faber-grade').each(function() {
+                            sum += parseFloat($(this).val()) || 0;
+                            count++;
+                        });
+                        var average = sum / count;
+                        $('#faber_avg').text(average.toFixed(1));
+                    }
+                
+                    // Call calculateAverage function when input values change
+                    $('.faber-grade').on('input', calculateAverage);
+                });
+                </script>
+            
+        </tbody>
+    </table>
+</body>
+</html>

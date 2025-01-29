@@ -1,0 +1,43 @@
+/* Stijl voor de containerdiv */
+.table-container {
+    display: flex;
+}
+
+/* Stijl voor de individuele tabellen */
+.table-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 400px;
+}
+
+/* Stijl voor de tabelkoppen (caption) */
+table caption {
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* Stijl voor de tabelcellen (th en td) */
+th, td {
+    border: 1px solid hsl(0, 0%, 0%);
+    padding: 15px;
+    text-align: left;
+}
+
+/* Stijl voor de afbeeldingen */
+img {
+    width: 20px;
+    height: 20px;
+    color: #be3c81;
+}
+.wolfram img {
+    height: 80px;
+    width: 486px;
+    
+}
+
+
+
+
+
+

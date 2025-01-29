@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta id="student" name="auteur" content="">
+    <meta id="klas" name="klas" content="">
+    <title>Toets Praktijk</title>
+    <link rel="stylesheet" type="text/css" href="./javascriptToetsPraktijk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pagina">
+        <h1 class="dynH1"></h1>
+        <h1>Het verre Oosten</h1>
+
+        <a id="opmaakTabel">Toon onze gerechten <emp>netjes</emp></a>
+
+        <br />
+
+        <div class="container">
+            <div id="links" class="links">
+                Toevoegen
+            </div>
+            <div id="rechts" class="rechts">
+                Verwijderen
+            </div>
+        </div>
+
+
+        <table id="gerechtenTabel" class="">
+            <caption>Onze gerechten</caption>
+            <thead><tr><th>Gerecht</th><th>Prijs</th></tr></thead>
+            <tbody id="gerechten"></tbody>
+        </table>
+
+        <hr>
+
+        <div class="containerAantallen">
+            Aantal gerechten getoond: <div id="aantalGerechten">0</div> / <div id="totaalAantal"></div>
+        </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        // Definieer array met objecten (gerechten, bijbehorende prijs)
+        let tabelRijen = [{ gerecht: "tod man plaa", prijs: 3.50 },
+        { gerecht: "kao", prijs: 1.00 },
+        { gerecht: "nam plaa", prijs: 1.50 },
+        { gerecht: "nam tok", prijs: 3.00 }
+        ];
+
+        // SCHRIJF HIER ONDER JOUW JAVASCRIPT CODE:
+        // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+       
+        // 1 2 en 3 
+        // ik maak gebruik van jquery en verander de text inhoud van "title" en de attribute van #student en #klas
+        $("title").text("Versie-A");
+        $("#student").attr("content", "Sufiyaan");
+        $("#klas").attr("content", "OITSDO3A");
+
+        // 4
+        // ik maak hier een object aan met als waarde gerecht "kai niauw" en prijs 1.75
+        let JavascriptObject = {
+            gerecht: "kao niauw",
+            prijs: 1.75
+        };
+
+        // 5 
+        // push de object in tabelrijen
+        tabelRijen.push(JavascriptObject);
+
+        // 6
+        // totaalAantal word vervangen door tabelrijen.length
+        $("#totaalAantal").text(tabelRijen.length);
+
+        // 7 // verander de textcontent naar restaurant
+        $(".dynH1").text("Restaurant");
+
+        // 8  // voeg de h1 bij de class restaurantTitel
+        $("h1").addClass("restaurantTitel");
+
+        //9 en 10 // voeg de div id links en rechts bi de class afgerond
+        $("links").addClass("afgerond");
+        $("rechts").addClass("afgerond");
+
+        //11 // geef de tabel de waarde van gerechtentbel.
+        let deTabel = $("#gerechtenTabel");    // Event listener toevoegen aan de div met id 'links'
+        $("#links").on("click", function() {
+        // Controleer het aantal rijen in de tabel
+        let aantalRijen = $('#gerechten')[0].rows.length;
+       
+        //12
+    
+
+        // Controleer of het aantal rijen kleiner is dan het aantal objecten in de array tabelRijen
+        if ($('#gerechten tbody tr').length < tabelRijen.length) {
+        // Voeg de rij toe aan de tbody met id 'gerechten'
+            $('#gerechten').append(`<tr><td>${tabelRijen[$('#gerechten tbody tr').length].gerecht}</td><td>${tabelRijen[$('#gerechten tbody tr').length].prijs}</td></tr>`);
+        } else {
+            console.log("We hebben niet meer gerechtem");
+        }
+
+        // Maak de inhoud van de div met id 'aantalGerechten' gelijk aan 1 + de waarde van de variabele 'aantalRijen'
+        $('#aantalGerechten').text(aantalRijen + 1);
+    });
+
+        // 13
+        function gerechtVerwijderen() {
+        // Definieer een variabele 'aantalRijen' met als waarde het aantal rijen in de tabel
+        let aantalRijen = $('#gerechten')[0].rows.length;
+
+        // Controleer of 'aantalRijen' groter is dan nul
+        if (aantalRijen > 0) {
+        // Verwijder de laatste rij uit de tabel
+        $('#gerechten')[0].deleteRow(aantalRijen - 1);
+
+        // Maak de inhoud van de div met id 'aantalGerechten' gelijk aan de waarde 'aantalRijen' - 1
+        $('#aantalGerechten').text(aantalRijen - 1);
+        } else {
+        // Schrijf naar de console dat er geen gerecht meer weg te halen is
+        console.log("Er is geen gerecht meer om weg te halen.");
+            }
+        }
+        // 14
+        // Event listener toevoegen aan de div met id 'rechts'
+        $("#rechts").on("click", function() {
+        // Roep de functie 'gerechtVerwijderen' aan wanneer erop wordt geklikt
+         gerechtVerwijderen();
+        });
+        // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        // SCHRIJF HIER BOVEN JOUW JAVASCRIPT CODE!
+
+        // Laat de code hieronder staan - dus niet verwijderen!
+
+        // Definieren 'deLink'
+        let deLink = $("#opmaakTabel");
+
+        // Toevoegen eventListener aan <a>, voor (verwijderen) opmaak tabel:
+        deLink.on("click", () => {
+            if (deTabel.hasClass("netteTabel")) {
+                deTabel.removeClass("netteTabel");
+                deLink.html("Toon onze gerechten <emp>netjes</emp>");
+            }
+            else {
+                deTabel.addClass("netteTabel");
+                deLink.html("Toon onze gerechten <emp>gewoon</emp>");
+            };
+        });
+
+    </script>
+</body>
+</html>

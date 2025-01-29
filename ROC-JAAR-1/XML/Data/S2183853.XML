@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <College naam="MBO College Zuidoost">
+        <lokaal naam = "331">
+            <weekdag naam = "Dinsdag">
+                <uur>
+                    <start>11:45</start>
+                    <eind>12:45</eind>
+                    <vak>Nederlands</vak>
+                </uur>
+            </weekdag>
+
+            <weekdag naam = "Vrijdag">
+                <uur>
+                    <start>13:15</start>
+                    <eind>14:15</eind>
+                    <vak>Rekenen</vak>
+                </uur>
+                <uur>
+                    <start>15:30</start>
+                    <eind>16:30</eind>
+                    <vak>HTML</vak>
+                </uur>
+            </weekdag>
+        </lokaal>
+    </College>

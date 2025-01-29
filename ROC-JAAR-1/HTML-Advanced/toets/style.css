@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 97vh;
+    font-family: monospace;
+}
+
+.flexweb {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: blue;
+    box-sizing: border-box;
+    padding: 10px; /* Voeg padding toe voor visuele aantrekkelijkheid */
+    order: -1;
+}
+
+.blokje,
+.blokje2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.blokje {
+    background-color: black;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+.blokje2 {
+    background-color: yellow;
+    top: 70px;
+    left: 70px;
+    z-index: 0;
+}
+
+.pdf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border: 3px solid #000;
+    margin: auto; /* Voeg margin: auto toe om het element in het midden van de pagina te centreren */
+}
+
+.pdf {
+    order: 2;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    order: 3;
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    margin-top: auto;
+}
+
+
+.custom-paragraph {
+    order: 1; 
+    text-align: center;
+    font-size: 20px;
+}

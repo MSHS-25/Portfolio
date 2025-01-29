@@ -1,0 +1,70 @@
+
+
+.navbar 
+{
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: -10px; /* Pas de waarde aan op basis van je ontwerpbehoeften */
+}
+
+.navbar p {
+    display: flex;
+    color: orange;
+    border: 2.5px solid black;
+    background-color: lightgray;
+    padding-left: 240px;
+    padding-right: 240px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    height: 400px;
+    background-color: darkgoldenrod;
+    border: 2px solid black;
+       
+}
+
+.Hoofdstuk {
+    margin-top: 0;
+    font-size: 60px;
+}
+.Hoofdstuk1, .Hoofdstuk2 {
+    
+    font-size: 20px;
+}
+
+.hobby-container {
+    display: flex;
+    flex-direction: row;
+    background-color: darkgoldenrod;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.hobby-2, .hobby-3 {
+    flex: 1; /* Zorg ervoor dat beide hobby's evenveel ruimte innemen */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.hobby-2 {
+    text-align: center; /* Plaats Hobby 2 aan de linkerkant */
+    border: 2px solid black;
+}
+
+.hobby-3 {
+    text-align: center; /* Plaats Hobby 3 aan de rechterkant */
+    border: 2px solid black;
+}

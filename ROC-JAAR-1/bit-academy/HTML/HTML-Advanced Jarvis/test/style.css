@@ -1,0 +1,28 @@
+main {
+    padding: 32px;
+    position: relative;
+    background-color: #E9E980;
+}
+
+div {
+    height: 32px;
+    width: 75px;
+    background-color: green;
+}
+
+#tegel-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#tegel-2 {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+#tegel-3 {
+    position: static;
+    left: 0;
+}

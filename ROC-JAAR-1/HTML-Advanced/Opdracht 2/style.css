@@ -1,0 +1,45 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.images {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: center; 
+    border: 5px dotted #08c008; 
+    padding-left: 170px;
+    padding-right: 170px;
+    border-radius: 20px;
+}
+
+
+.images img {
+    width: 100px; 
+    height: auto; 
+}
+
+img {
+    width: 400px; 
+    margin: 5px; 
+    
+}
+
+p{
+    width: 900px;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.flex-container img {
+    max-width: 100%;
+}
+.Energie{
+    font-size: 20px;
+}

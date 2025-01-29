@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Opdracht 1c</title>
+    </head>
+    <body>
+        <a href="http://news.google.nl">Nieuws van Google</a>
+        
+        
+        
+        
+    <script>
+            $(document).ready(function () {
+                $("a").click(function (event) {
+                    alert("De link stuurt je niet meer door naar google...");
+                    event.preventDefault();
+                });
+            });
+    </script>
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+        crossorigin="anonymous">
+        </script>
+    </body>
+</html>

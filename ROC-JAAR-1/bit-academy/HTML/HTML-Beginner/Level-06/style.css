@@ -1,0 +1,15 @@
+h1{
+    color: bisque;
+}
+.dagen{
+    width: 10px;
+}
+
+
+.test {
+    border: 2px solid red; /* Rode border standaard */
+}
+
+.test:focus {
+    border: 2px solid green; /* Groene border wanneer geselecteerd */
+}

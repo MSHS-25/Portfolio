@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aanmelden - Sufi's Blog</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Aanmelden bij Sufi's Blog</h1>
+    
+    <p>Wat is jouw e-mailadres?</p>
+    
+    <form action="verwerk.php" method="post">
+        <label for="telefoon-nummer">Telefoonnummer:</label>
+        <input type="text " id="telefoon-nummer" name="telefoon-nummer" required>
+        <br><br>
+        
+        <label for="email">E-mailadres:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        
+        <label for="pin-code">Pincode:</label>
+        <input type="number" id="pin-code" name="pin-code" required>
+        <br><br>
+        
+        <label for="password">Wachtwoord:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <label for="Provincie">Provincie:</label>
+        <select name="Provincie" id="Provincie">
+            <option value="Drenthe">Drenthe</option>
+            <option value="Flevoland">Flevoland</option>
+            <option value="Friesland">Friesland</option>
+            <option value="Gelderland">Gelderland</option>
+            <option value="Groningen">Groningen</option>
+            <option value="Limburg">Limburg</option>
+            <option value="Noord Brabant">Noord Brabant</option>
+            <option value="Noord Holland">Noord Holland</option>
+            <option value="Overijssel">Overijssel</option>
+            <option value="Zuid Holland">Zuid Holland</option>
+            <option value="Utrecht">Utrecht</option>
+            <option value="Zeeland">Zeeland</option>
+        </select>
+        <br><br>
+
+        <fieldset>
+            <legend>Hou je van voetbal?</legend>
+            <div>
+                <input type="radio" id="Ja" name="Voetbal" value="Ja">
+                <label for="Ja">Ja</label>
+            </div>
+           
+            <div>
+                <input type="radio" id="Nee" name="Voetbal" value="Nee">
+                <label for="Nee">Nee</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Favoriete dagen in de week</legend>
+            <div class="dagen">
+                <input type="checkbox" id="Maandag" name="Dagen[]" value="Maandag">
+                <label for="Maandag">Maandag</label>
+                
+                <input type="checkbox" id="Dinsdag" name="Dagen[]" value="Dinsdag">
+                <label for="Dinsdag">Dinsdag</label>
+                
+                <input type="checkbox" id="Woensdag" name="Dagen[]" value="Woensdag">
+                <label for="Woensdag">Woensdag</label>
+                
+                <input type="checkbox" id="Donderdag" name="Dagen[]" value="Donderdag">
+                <label for="Donderdag">Donderdag</label>
+                
+                <input type="checkbox" id="Vrijdag" name="Dagen[]" value="Vrijdag">
+                <label for="Vrijdag">Vrijdag</label>
+              
+                <input type="checkbox" id="Zaterdag" name="Dagen[]" value="Zaterdag">
+                <label for="Zaterdag">Zaterdag</label>
+                
+                <input type="checkbox" id="Zondag" name="Dagen[]" value="Zondag">
+                <label for="Zondag">Zondag</label>
+            </div>
+        </fieldset>
+
+        <label for="test">Opmerkingen:</label>
+        <textarea id="test" name="test" class="test"></textarea>
+
+        <input type="submit" id="submit" name="submit" value="Aanmelden">
+    </form>
+</body>
+</html>

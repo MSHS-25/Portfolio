@@ -1,0 +1,145 @@
+.Hele-website {
+    font-family: monospace;
+    background-color: gainsboro;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    background-color: lightgray;
+}
+
+.navbar p {
+    display: flex;
+    color: orange;
+    background-color: white;
+    border: 2.5px solid gray;
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.flex-container, .hobby-container {
+    border: 2.5px solid gray;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 40px;
+    color: black;
+    border-radius: 20px;
+    align-items: center;
+    background-color: whitesmoke;
+    flex: 1;
+    margin: 10px auto;
+    order: 1;
+    font-size: 20px;
+    position: relative;
+}
+
+.info {
+    border: 2.5px solid gray;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 40px;
+    color: black;
+    border-radius: 20px;
+    align-items: center;
+    background-color: whitesmoke;
+    flex: 1;
+    margin: 10px auto;
+    order: 1;
+    font-size: 20px;
+    position: relative; 
+}
+
+.Hoofd-Pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    order: 1;
+    border: 2.5px solid gray;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    width: 300px;
+    padding: 40px;
+    position: relative;
+}
+
+.Images {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.Images img {
+    max-width: 500px;
+    height: auto;
+    border: 2.5px solid gray;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.Review {
+    border: 2.5px solid gray;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 40px;
+    color: black;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    margin: 10px auto;
+    font-size: 20px;
+    position: relative;
+}
+
+.solo {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+}
+
+.solo img {
+    height: 700px;
+    border: 2.5px solid gray;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.Panel {
+    border: 2.5px solid gray;
+    text-align: center;
+    width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    margin: 10px auto;
+    font-size: 20px;
+    position: relative;
+}
+
+footer {
+    text-align: center;
+    padding-top: 30px;
+}
+
+footer video {
+    height: auto;
+    border: 2.5px solid gray;
+    border-radius: 20px;
+    position: relative;
+}

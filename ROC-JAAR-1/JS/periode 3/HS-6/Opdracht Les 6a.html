@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Les 6 - jQuery</title>
+    <style>
+        .gekleurd {
+            background-color: darkslateblue;
+            height: 200px;
+            width: 100%;
+        }
+        .container {
+            width: 155px;
+            height: 155px;
+            margin: 10px;
+            padding: 10px;
+            background-color: aliceblue;
+            border: 2px solid grey;
+        }
+
+        .extra {
+            background-color: transparent;
+        }
+
+        .onderstreept {
+            text-decoration: underline;
+        }
+
+        .kleur-1 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: salmon;
+            border: 2px solid grey;
+            border-radius: 0% 50% 50% 50%;
+        }
+
+        .kleur-2 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: darkkhaki;
+            border: 2px solid grey;
+            border-radius: 50% 0% 50% 50%;
+        }
+
+        .kleur-3 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: indigo;
+            border: 2px solid grey;
+            border-radius: 50% 50% 0% 50%;
+        }
+
+        .kleur-4 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: olive;
+            border: 2px solid grey;
+            border-radius: 50% 50% 50% 0%;
+        }
+
+        .onder {
+            z-index: 0;
+        }
+        .boven {
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <h2>Het belang van de div</h2>
+        <div id="eersteDiv" class="extra">Een stukje tekst...</div>
+            <hr />
+    <h2 id="h2Button">Het belang van een button</h2>
+                <button>Doe</button>
+            <hr />
+        <div id ="container" class="extra"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        // Controleer of element met id "container" de class "container" heeft, zo niet, voeg de class toe.
+        if ($("#container").hasClass("container") === false) {
+            $("#container").addClass("container");
+        }
+
+        // Maak een variabele gelijk aan het element met id "eersteDiv".
+        let eersteDiv = $("#eersteDiv");
+
+        // Controleer of "eersteDiv" de class "extra" heeft, zo ja, vervang het met de class "gekleurd".
+        if (eersteDiv.hasClass("extra")) {
+            eersteDiv.removeClass("extra").addClass("gekleurd");
+        }
+
+        // Voeg de class "onderstreept" toe aan alle h2-elementen met jQuery-selectie.
+        $("h2").addClass("onderstreept");
+
+        // Wijzig de tekst van het element met id "h2Button" naar "Een button met een actie".
+        $("#h2Button").text("Een button met een actie");
+
+        // Voeg een click-eventlistener toe aan alle button-elementen om het toggle-effect voor elementen met class "gekleurd" te activeren.
+        $("button").click(function() {
+            $(".gekleurd").fadeToggle(400);
+        });
+
+        // Schakel eerder toegevoegde click-eventlistener voor button-elementen uit.
+        $("button").off('click');
+
+        // Voeg een nieuwe click-eventlistener toe aan button-elementen met een arrow-functie om het slide-toggle-effect voor elementen met class "gekleurd" te activeren.
+        $("button").on("click", (e) => {
+            $(".gekleurd").slideToggle(600);
+        });
+
+        // Maak vier nieuwe div's binnen de div met id 'container' en geef ze alle vier een verschillende class.
+        for (let i = 1; i <= 4; i++) {
+            $("#container").append(`<div class="kleur-${i}"></div>`);
+        }
+
+        // Definieer een mouseover event op de children van de container-div.
+        $("#container").on("mouseover", "div", function(e) {
+            // Als het element de class 'boven' heeft, verwijder je deze class.
+            if ($(this).hasClass("boven")) {
+                $(this).removeClass("boven");                                                                   
+            }
+            // Als het element de class 'onder' heeft, verwijder je deze class.
+            if ($(this).hasClass("onder")) {
+                $(this).removeClass("onder");
+            }
+            // Voeg aan de classList van e.target de class 'boven' toe.
+            e.target.classList.add("boven");
+        });
+    </script>
+</body>
+</html>

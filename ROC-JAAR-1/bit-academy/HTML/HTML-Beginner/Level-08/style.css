@@ -1,0 +1,46 @@
+table, td, th {
+    border: solid white 2px;
+    padding: 30px;
+}
+.Bovenkant{
+    background-color: whitesmoke;
+    padding: 30px;
+}
+.Hydrogen{
+    background-color: orange;
+    border-color: black;
+    padding: 30px;
+    cursor: pointer;
+ 
+}
+.Li{
+    background-color:  rgb(231, 36, 231);
+    color: white;
+    border-color: black;
+    padding: 30px;
+    cursor: pointer;
+}
+.Be{
+    background-color: lightblue;
+    border-color: black;
+    padding: 30px;
+    cursor: pointer;
+}
+.Sc{
+    background-color: yellow;
+    border-color: black;
+    padding: 30px;
+    cursor: pointer;
+}
+.Sc:hover{
+    background-color: lightyellow;
+}
+.Be:hover{
+    background-color: darkblue;
+}
+.Li:hover{
+    background-color: pink;
+}
+.Hydrogen:hover{
+    background-color: orangered;
+}

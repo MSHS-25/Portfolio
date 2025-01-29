@@ -1,0 +1,93 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    background-color: azure;
+    padding: 10px 5px;
+}
+
+
+.containerAantallen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 0px 10px 0px;
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 0px 0px 0px;
+}
+
+.links {
+    background-color: mistyrose;
+    padding: 10px;
+    align-self: flex-start;
+}
+
+.rechts {
+    background-color: lightsteelblue;
+    padding: 10px;
+    align-self: flex-end;
+}
+
+
+caption {
+    padding-top: 20px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.restaurantTitel {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0px 0px 25px 0px;
+    padding: 0px 0px 0px 15px;
+}
+
+.dynH1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.afgerond {
+    border-radius: 50%;
+}
+
+.netteTabel {
+    border-collapse: collapse;
+    margin: 25px 0px 0px 0px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.netteTabel thead tr {
+    background-color: lightsalmon;
+    color: #ffffff;
+    text-align: left;
+}
+
+.netteTabel td {
+    padding: 12px 15px;
+}
+
+.netteTabel tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.netteTabel tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.netteTabel tbody tr:last-of-type {
+    border-bottom: 2px solid lightsalmon;
+}

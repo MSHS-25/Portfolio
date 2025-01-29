@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML</title>
+    
+</head>
+<body>
+
+//Voeg een <a> in (zelf URL kiezen)
+<a href="https://www.example.com">Link naar voorbeeld</a>
+
+//Voeg daaronder een <table> in (alleen: <table id="deTabel"></table>) -->
+<table id="deTabel"></table>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+// Maak een javascript object 'eigenschappen' met als properties
+let eigenschappen = {
+    titel: 'Dynamisch',
+    aantalRijen: 6
+};
+
+// Voeg BOVEN de <a> een <h1> in met als tekst: de waarde van eigenschap 'titel' uit het javascript object 'eigenschappen'
+$('<h1>').text(eigenschappen.titel).insertBefore('a');
+
+// Voeg aan de tabel (met id: 'deTabel') net zoveel rijen toe als de waarde 'aantalRijen' uit het javascript object 'eigenschappen'
+for (let i = 1; i <= eigenschappen.aantalRijen; i++) {
+    $('#deTabel').append(`<tr><td>Rij ${i}</td></tr>`);
+}
+</script>
+</body>
+</html>

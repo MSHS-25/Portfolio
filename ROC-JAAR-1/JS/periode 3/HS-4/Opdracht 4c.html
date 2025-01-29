@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 4c</title>
+    <style>
+        #klok {
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dit is een grote titel</h1>
+    Het is nu: <div id="klok"></div>
+    <br />
+
+   
+    <p>Doggo ipsum aqua doggo sub woofer long water shoob yapper, what a nice floof. Aqua doggo floofs adorable doggo blep, wow very biscit h*ck. Woofer shooberino such treat fluffer, you are doing me a frighten. Pupperino heck you are doing me the shock clouds borkdrive doggorino, shooberino long bois pats. smol you are doing me a frighten. Heckin good boys and girls wow very biscit shoob ruff, maximum borkdrive. Adorable doggo bork snoot porgo, smol I am bekom fat. Corgo heckin good boys and girls heckin angery woofer doggo, sub woofer doggorino. Boof pupper borkdrive very jealous pupper, super chub you are doing me a frighten. Blop snoot you are doing me a frighten heck woofer, very taste wow big ol pupper. Shooberino thicc I am bekom fat lotsa pats big ol pupper pupper super chub, woofer lotsa pats borking doggo long water shoob.</p>
+
+    <script>
+        // Definieer een variabele 'klokDiv' met als waarde de id 'klok'
+        var klokDiv = document.querySelector('#klok');
+    
+        var elkeSeconde = setInterval(() => {
+            var datum = new Date();
+    
+            // Definieer een variabele 'uren', als 'uren' kleiner is dan 10, dan wordt er een '0' vóór 'geplakt'.
+            let uren = datum.getHours();
+            if (uren < 10) {
+                uren = '0' + uren;
+            }
+    
+            // Definieer een variabele 'minuten', als 'minuten' kleiner is dan 10, dan wordt er een '0' vóór 'geplakt'.
+            let minuten = datum.getMinutes();
+            if (minuten < 10) {
+                minuten = '0' + minuten;
+            }
+    
+            // Definieer een variabele 'seconden', als 'seconden' kleiner is dan 10, dan wordt er een '0' vóór 'geplakt'.
+            let seconden = datum.getSeconds();
+            if (seconden < 10) {
+                seconden = '0' + seconden;
+            }
+    
+            // Wijzig de inhoud van de <div> 'klok'. Maak 'textContent' van 'klok' gelijk aan `${uren}:${minuten}:${seconden}`.
+            klokDiv.textContent = `${uren}:${minuten}:${seconden}`;
+        }, 1000); // Na 1000 milliseconden (dus 1 seconde), doe dit opnieuw
+    </script>
+
+</body>
+</html>

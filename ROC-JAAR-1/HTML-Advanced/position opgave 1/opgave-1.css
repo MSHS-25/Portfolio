@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+}
+
+.title {
+  background-color: red;
+  width: 800px;
+  text-align: center;
+  color: white;
+}
+
+.buffer-end {
+  height: 100vh;
+}
+
+.buffer {
+  height: 25vh;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tetris-reverse {
+  position: relative;
+  background-color: lightgray;
+  width: 800px;
+  z-index: -1;
+}
+
+.gameblock {
+  width: 100px;
+  height: 100px;
+  border: solid black 1px;
+  box-sizing: border-box;
+}
+
+.L {
+  display: flex;
+  flex-flow: column wrap;
+  width: 200px;
+  height: 300px;
+}
+
+.L .gameblock {
+  background-color: lightblue;
+}
+
+.I {
+  display: flex;
+  width: 200px;
+  height: 200px; 
+  flex-wrap: wrap;
+}
+.I .gameblock {
+  background-color: lightgreen;
+}
+
+.d-1 {
+  position: sticky;
+  top: 0px;
+  left: 500px;
+}
+
+.d-0 {
+  position: sticky;
+  top: 0;
+  left: 300px;
+}
+
+.d-3 {
+  position: sticky;
+  top: 300px;
+  left: 300px;
+}
+
+.Streep{
+  display: flex;
+  width: 300px;
+  height: 100px; 
+  flex-wrap: wrap;
+}
+.Streep .gameblock{
+  background-color: rebeccapurple;
+}
+.A-1{
+  top: 0px;
+  left: 0px;
+  position:sticky
+}
+.Potlood{
+  display: flex;
+  width: 100px;
+  height: 500px; 
+  flex-wrap: wrap;
+}
+.Potlood .gameblock{
+  background-color: red;
+}
+
+.g-1{
+  top: 0px;
+  left: 700px;
+  position:sticky
+}

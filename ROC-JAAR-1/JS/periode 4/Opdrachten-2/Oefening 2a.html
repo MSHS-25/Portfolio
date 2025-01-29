@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Lijst</title>
+    <style>
+        .gedaan {
+            text-decoration : line-through;
+        }
+        li {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do Lijst</h1>
+    <input type="text" id="taskName" placeholder="Taaknaam">
+    <input type="text" id="taskDescription" placeholder="Beschrijving">
+    <button id="addTaskButton">Taak toevoegen</button>
+    <ul id="taskList"></ul>
+
+    <script src="to-do.js"></script>
+</body>
+</html>

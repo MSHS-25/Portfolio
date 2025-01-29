@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup Pagina</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease; /* Voeg een overgang toe voor een soepele animatie */
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .container:hover {
+            transform: scale(1.05); /* Vergroot de container */
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(164, 164, 164);
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.5s ease; /* Voeg een overgang toe voor een soepele animatie */
+        }
+        nav a:hover {
+            color: whitesmoke;
+            transform: translateY(-2px); /* Pas de verticale verschuiving aan zoals gewenst */
+        }
+    </style>
+</head>
+<body>
+    <div class="Hele-website">
+        <div class="info">
+            <h1 class="DRIPSTA">DRIPSTA</h1>
+        </div>
+        <nav>
+            <a href="Hoofd.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </div>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="#" method="post">
+            <input type="text" name="username" placeholder="Gebruikersnaam" required>
+            <input type="password" name="password" placeholder="Wachtwoord" required>
+            <input type="submit" value="Inloggen">
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Signup</h2>
+        <form action="#" method="post">
+            <input type="text" name="username" placeholder="Gebruikersnaam" required>
+            <input type="password" name="password" placeholder="Wachtwoord" required>
+            <input type="password" name="confirm_password" placeholder="Bevestig wachtwoord" required>
+            <input type="submit" value="Registreren">
+        </form>
+    </div>
+    <footer>
+        <div>
+            <p>&copy; 2024 DRIPSTA. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+</body>
+</html>

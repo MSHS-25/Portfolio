@@ -1,0 +1,39 @@
+h1 {
+    color: white;
+    background-color: black;
+    cursor: grab;
+    font-size: 40px;
+    font-family: monospace;
+}
+
+.tomatensaus {
+    font-family: monospace;
+    color: darkgreen;
+    font-size: x-large;
+}
+
+img {
+    border-radius: 400px;
+}
+
+.Info {
+    font-family: monospace;
+    cursor: grab;
+    width: 175px;
+    font-size: 20px;
+    color: darkgreen;
+    font-size: xx-large;
+}
+
+.naam {
+    width: 500px;
+    font-family: monospace;
+    color: darkgreen;
+    font-size: x-large;
+}
+
+
+.highlight {
+    color: lightgreen;
+}
+

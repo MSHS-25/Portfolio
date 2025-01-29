@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@300&family=Protest+Guerrilla&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+            font-size: 4em;
+        }
+        h2,p,gameTitle {
+            font-family: sans-serif;
+        }
+        .gameTitle {
+            font-size: larger;
+            text-decoration: underline;
+            font-weight: bolder;
+            margin-top: 10px;
+            font-family: sans-serif;
+        }
+        .gameThumb {
+            width: 300px;
+            padding: 5px;
+        }
+        .selectieContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .gameContainer {
+            display: flex;
+            flex-direction: column;
+            margin: 0px 10px 0px 0px;
+        }
+        .beschrijving {
+            font-family: sans-serif;
+        }
+        .protest-guerrilla-regular {
+            font-family: "Protest Guerrilla", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="protest-guerrilla-regular">De games</h1>
+    <div id="gameSelectie" class="selectieContainer">
+        <div class="gameContainer"><div id="gameTitle0" class="gameTitle"></div><img id="gameImage0" onClick="showDetails(this);"/></div>
+        <div class="gameContainer"><div id="gameTitle1" class="gameTitle"></div><img id="gameImage1" onClick="showDetails(this);"/></div>
+        <div class="gameContainer"><div id="gameTitle2" class="gameTitle"></div><img id="gameImage2" onClick="showDetails(this);"/></div>
+    </div>
+    <h2 id="gameTitle"></h2>
+    <div id="beschrijving"></div>
+    <div id="thumbs"></div>
+    <script>
+        // =========================================================
+        // Schrijf hieronder jouw code:
+        // ----------------------------
+        let alleGames = [];
+        let games = [];
+        let xhr = new XMLHttpRequest();
+
+        xhr.onload = function () {
+            alleGames = JSON.parse(xhr.responseText); // Bewaar de geladen games in alleGames
+
+            for (let i = 0; i < 3; i++) { // Loop door de eerste 3 games
+                let idx = Math.floor(Math.random() * alleGames.length);
+                games.push(alleGames[idx]); // Push het game-object naar games array, niet de index
+            }
+
+            for (let index = 0; index < games.length; index++) {
+                let game = games[index]; // Haal het game-object op
+                document.getElementById(`gameTitle${index}`).textContent = game.title;
+                document.getElementById(`gameImage${index}`).src = game.thumbnail;
+            }
+        };
+
+        xhr.open("GET", `http://127.0.0.1:3000/api/games`)
+        xhr.send();
+        // ----------------------------
+        // Schrijf hierboven jouw code!
+        // =========================================================
+
+ 
+        function showDetails(object) {
+          
+            document.querySelector('#thumbs').innerHTML = "";
+
+         
+            let id = (object.id)[object.id.length-1];
+            let gameId = games[id].id; 
+            
+            // =========================================================
+            // Schrijf hieronder jouw code:
+            // ----------------------------
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                let gameInfo = JSON.parse(xhr.responseText);
+
+                document.querySelector("#beschrijving").innerHTML = gameInfo.description;
+
+                document.querySelector('#thumbs').innerHTML = "";
+                for (let i = 0; i < gameInfo.screenshots.length; i++) {
+                    let thumbURL = gameInfo.screenshots[i].image;
+
+                    let thumbnail = document.createElement('img');
+                    thumbnail.src = thumbURL;
+                    thumbnail.className = 'gameThumb';
+
+                    document.querySelector('#thumbs').appendChild(thumbnail);
+                }
+
+                document.getElementById('gameTitle').textContent = gameInfo.title;
+            };
+
+            xhr.open("GET", `http://127.0.0.1:3000/api/game?id=${gameId}`);
+            xhr.send();
+        };
+
+            // ----------------------------
+            // Schrijf hierboven jouw code!
+            // =========================================================
+    </script>
+</body>
+</html>

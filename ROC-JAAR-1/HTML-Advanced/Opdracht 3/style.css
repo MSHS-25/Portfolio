@@ -1,0 +1,78 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Aangepast naar flex: 1 om de beschikbare ruimte in te nemen */
+    height: 100%;
+    order: 1;
+}
+
+.flex-reclame {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 30px;
+    color: black;
+    border-radius: 20px;
+    align-items: center;
+    background-color: lightgreen;
+    flex: 1;
+    margin: 10px; /* Voeg wat marge toe rondom de flex-reclame voor esthetiek */
+    order: 1;
+}
+.flex-reclame2{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 30px;
+    color: black;
+    border-radius: 20px;
+    align-items: center;
+    background-color: lightgreen;
+    flex: 1;
+    margin: 10px; /* Voeg wat marge toe rondom de flex-reclame voor esthetiek */
+    order: 2;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px dotted #08c008;
+    padding-left: 20px; /* Verminder de padding om het wat compacter te maken */
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.images img {
+    width: 100px;
+    height: auto;
+}
+
+img {
+    width: 400px;
+    margin: 5px;
+}
+
+.test {
+    width: 900px;
+    margin: 20px 0; /* Voeg wat marge toe boven en onder de test-klasse */
+}
+
+.flex-container img {
+    max-width: 100%;
+}
+
+.Energie {
+    font-size: 20px;
+}
+div {
+    display: flex;
+}

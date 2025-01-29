@@ -1,0 +1,58 @@
+p {
+    font-family: monospace;
+    width: 600px;
+    background-color: bisque;
+}
+
+h1 {
+    font-family: monospace;
+    background-color: bisque;
+    width: 600px;
+}
+
+h2 {
+    font-family: monospace;
+    background-color: bisque;
+    width: 600px;
+}
+
+h3 {
+    font-family: monospace;
+    background-color: bisque;
+    font-size: large;
+    width: 600px;
+}
+
+html {
+    background-color: white;
+}
+
+li {
+    background-color: beige;
+    font-family: monospace;
+    color: black;
+    width: 600px;
+}
+
+/* Stijl voor de eerste artikelcontainer */
+
+
+
+/* Stijl voor de tweede artikelcontainer */
+.article2{
+    background-color: lightblue;
+    font-family: monospace;
+    width: 600px;
+}
+
+/* Stijl voor de derde artikelcontainer */
+.article3 {
+    background-color: lightgreen;
+    font-family: monospace;
+    width: 600px;
+}
+
+footer{
+    text-align: center;
+    background-color: cornsilk;
+}

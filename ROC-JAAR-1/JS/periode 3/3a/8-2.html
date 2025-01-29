@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML met JavaScript</title>
+</head>
+<body>
+
+    <h1 id="pageTitle">Dit is een H1-titel</h1>
+
+    <div id="div1">Dit is de eerste div</div>
+    <div id="div2">Dit is de tweede div</div>
+
+    <a href="#" class="link">Dit is een link</a>
+
+    <script>
+        console.log("Hello, world!");
+
+        var h1Element = document.getElementById("pageTitle");
+        console.log("H1 Element:", h1Element);
+
+
+        var divElements = document.getElementsByTagName("div");
+        console.log("Div Elements:", divElements);
+
+
+        var aElements = document.getElementsByClassName("link");
+        console.log("A Elements:", aElements);
+    </script>
+
+
+</body>
+</html>

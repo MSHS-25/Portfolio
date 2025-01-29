@@ -1,0 +1,38 @@
+@keyframes moveAndChangeColor {
+  0% {
+    background-color: red;
+    transform: translateX(0) translateY(-20px);
+  }
+  20% {
+    background-color: blue;
+    transform: translateX(100px) translateY(500px);
+  }
+  40% {
+    background-color: green;
+    transform: translateX(200px) translateY(500px);
+  }
+  60% {
+    background-color: yellow;
+    transform: translateX(300px) translateY(500px);
+  }
+  80% {
+    background-color: blue;
+    transform: translateX(400px) translateY(0);
+  }
+  90% {
+    background-color: blue;
+    transform: translateX(500px) translateY(0);
+  }
+  100% {
+    background-color: red;
+    transform: translateX(0px) translateY(0);
+  }
+}
+
+.blokje {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  animation: moveAndChangeColor 5s ease infinite; /* Verhoog de duur voor een langzamere slingshot-animatie */
+}

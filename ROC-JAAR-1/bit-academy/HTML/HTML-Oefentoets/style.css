@@ -1,0 +1,29 @@
+header{
+    background-color: bisque;
+}
+footer{
+    text-align: center;
+}
+table, td, th {
+    border: solid black 2px;
+    padding: 10px;
+}
+.nee{
+    background-color: red;
+}
+.ja{
+    background-color: green;
+}
+
+input{
+    border-radius: 2px;
+}
+html{
+    background-color: beige;
+}
+h1{
+    font-size: x-large;
+}
+span{
+    color: aquamarine;
+}

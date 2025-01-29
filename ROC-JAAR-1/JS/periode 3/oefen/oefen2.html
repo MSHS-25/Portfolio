@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winkelwagen</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    #producten,
+    #winkelwagen {
+        list-style-type: none;
+        padding: 0;
+    }
+    #producten li,
+    #winkelwagen li {
+        cursor: pointer;
+        margin-bottom: 10px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+    }
+    #producten li:hover,
+    #winkelwagen li:hover {
+        background-color: #f0f0f0;
+    }
+    #winkelwagen {
+        margin-top: 20px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <h2>Producten</h2>
+    <ul id="producten"></ul>
+
+    <h2>Winkelwagen</h2>
+    <ul id="winkelwagen"></ul>
+
+    <button id="btnClear" class="btn">Winkelwagen leegmaken</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Voorbeelditems
+            const voorbeeldItems = ["Appel", "Banaan", "Sinaasappel"];
+            const winkelwagen = [];
+
+            const productenList = document.querySelector("#producten");
+            const winkelwagenList = document.querySelector("#winkelwagen");
+            const btnClear = document.querySelector("#btnClear");
+
+            // Toon items op de webpagina
+            voorbeeldItems.forEach(function(item) {
+                const li = document.createElement("li");
+                li.textContent = item;
+                productenList.appendChild(li);
+            });
+
+            // Voeg item toe aan winkelwagen wanneer erop wordt geklikt
+            productenList.addEventListener("click", function(event) {
+                const selectedItem = event.target.textContent;
+                winkelwagen.push(selectedItem);
+                updateWinkelwagen();
+            });
+
+            // Verwijder alle items uit de winkelwagen
+            btnClear.addEventListener("click", function() {
+                winkelwagen.length = 0;
+                updateWinkelwagen();
+            });
+
+            // Update de inhoud van de winkelwagen op de webpagina
+            function updateWinkelwagen() {
+                winkelwagenList.innerHTML = "";
+                winkelwagen.forEach(function(item) {
+                    const li = document.createElement("li");
+                    li.textContent = item;
+                    winkelwagenList.appendChild(li);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
