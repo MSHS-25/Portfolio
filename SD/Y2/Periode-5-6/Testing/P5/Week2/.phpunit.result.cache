@@ -1,1 +1,0 @@
-{"version":1,"defects":{"ListFunctionsTest::testGetSum":7,"ListFunctionsTest::testAdd":7},"times":{"ListFunctionsTest::testGetSum":1.484,"ListFunctionsTest::testAdd":0.164,"CalculatorTest::testAdd":0.014,"CalculatorTest::testSubtract":0.007,"CalculatorTest::testMultiplicate":0,"CalculatorTest::testDivide":0}}
