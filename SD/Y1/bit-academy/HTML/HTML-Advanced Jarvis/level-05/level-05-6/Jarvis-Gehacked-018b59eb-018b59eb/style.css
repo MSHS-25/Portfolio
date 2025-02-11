@@ -1,0 +1,117 @@
+/* Reset van standaard marges en padding voor het hele document */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Stijlen voor het menubalk gedeelte */
+.menubar {
+  display: flex;
+  background-color: #000563;
+  padding: 10px;
+  justify-content: space-evenly; /* Plaatst items aan de uiteinden */
+  align-items: center;
+  text-align: center;
+  height: 30px;
+}
+
+/* Stijlen voor de ongeordende lijst binnen het menu */
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Stijlen voor elk lijstitem in het menu */
+li {
+  margin: 0 20px;
+}
+
+/* Stijlen voor koppelingen in het menu */
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+/* Stijlen voor de tabel */
+table {
+  display: flex;
+  padding: 20px;
+  padding-left: 30px;
+  width: 700px;
+  text-align: left;
+  justify-content: center;
+  font-family: monospace;
+  border: 1px solid grey; /* 1px brede grijze rand om de tabel */
+  border-radius: 5px;
+  line-height: 30px;
+  background-color: white;
+  margin: 50px auto; /* Centreren in het midden van de pagina */
+}
+
+/* Stijlen voor kop 1 */
+.kop {
+  font-size: 30px;
+  font-family: monospace;
+  text-align: left;
+  margin-top: 50px;
+  padding-left: 500px;
+  padding-bottom: 0;
+}
+
+/* Stijlen voor knoppen */
+.knop {
+  background-color: #57be8e;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+}
+
+/* Achtergrondkleur van de pagina */
+html {
+  background-color: whitesmoke;
+}
+
+/* Stijlen voor tabelcellen */
+td {
+  padding: 5px;
+}
+
+.logo{
+  margin-left: 0;
+  max-width: 100px;
+  max-height: 42px;
+}
+.menu-icon {
+  aspect-ratio: 1/1;
+  max-width: 30px; /* Pas dit aan naar de gewenste breedte */
+  max-height: 30px; /* Pas dit aan naar de gewenste hoogte */
+  
+}
+
+
+header{
+  font-family: monospace;
+  font-size: 20px;
+}
+/* Voeg een nieuwe CSS-regel toe voor het artikel om het aan de rechterkant van de pagina te plaatsen */
+article {
+  border: solid grey 1px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 350px;
+  text-align: center;
+  width: 250px;
+  padding-left: 10px;
+  padding-right: 10px;
+  top: 50px;
+  left: 100px;
+  height:  80px;
+}
+.resize-image {
+  max-width: 200px;
+  max-height: 100px;
+}

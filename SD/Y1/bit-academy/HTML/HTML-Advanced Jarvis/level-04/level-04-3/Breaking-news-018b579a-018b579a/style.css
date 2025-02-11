@@ -1,0 +1,19 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: orange;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    align-items: center;
+}
+
+#breaking {
+    display: flex;
+    order: -1;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content:center
+}

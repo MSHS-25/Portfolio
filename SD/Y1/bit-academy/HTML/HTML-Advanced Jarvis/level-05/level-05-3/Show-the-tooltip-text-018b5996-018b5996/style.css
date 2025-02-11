@@ -1,0 +1,11 @@
+.tooltip-content {
+    display: none;
+    
+}
+
+
+.icon:hover + .tooltip-content {
+    background-color: black;
+    color: white;
+    display: block;
+}

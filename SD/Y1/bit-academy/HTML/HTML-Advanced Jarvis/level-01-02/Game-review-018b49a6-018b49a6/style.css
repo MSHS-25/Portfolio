@@ -1,0 +1,27 @@
+/* CSS voor de flex-container */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* CSS voor de binnenste flex-container met de afbeeldingen */
+.images {
+    display: flex;
+    flex-direction: row; /* Horizontale weergave van de afbeeldingen */
+    justify-content: center;
+    align-items: center; /* Afbeeldingen verticaal centreren */
+}
+
+.images h1 {
+    margin: 0; /* Verwijder de standaardmarges van de h1-elementen */
+}
+
+.images img {
+    max-width: 100%; /* Behoud de oorspronkelijke verhoudingen van de afbeeldingen */
+    margin: 5px; /* Voeg wat ruimte tussen de afbeeldingen toe */
+}
+p{
+    width: 700px;
+}

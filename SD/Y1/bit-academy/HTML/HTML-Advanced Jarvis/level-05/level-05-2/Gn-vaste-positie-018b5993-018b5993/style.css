@@ -1,0 +1,11 @@
+.content{
+    display: flex;
+    position:  relative;
+}
+.blauw{
+    display: flex;
+    position: relative;
+    top: 100px;
+    right: 100px;
+    z-index: -1;
+}

@@ -1,0 +1,36 @@
+/* CSS voor de flexbox-container */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* CSS voor de afbeelding binnen de container */
+.flex-container img {
+    max-width: 100%;
+}
+
+.flex-reclame {
+    width: 48%; /* Adjust the width as needed */
+    background-color: blue;
+    color: white;
+    flex-grow: 1;
+    flex-shrink: 1;
+    order: 1; /* Set the order to 1 to place it on the left */
+}
+
+.flex-reclame2 {
+    width: 48%; /* Adjust the width as needed */
+    background-color: blue;
+    color: white;
+    flex-grow: 1;
+    flex-shrink: 1;
+    order: 2; /* Set the order to 2 to place it on the right */
+}
+
+
+
+
+
